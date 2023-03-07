@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { ProductCardProps } from "../components/ProductCard";
 export interface Product {
   id: string;
@@ -29,4 +28,18 @@ export interface ProductCardHOCProps {
     className?: string;
   }) => JSX.Element;
   Buttons: ({ className }: { className?: string }) => JSX.Element;
+}
+
+/* interface ProductButtonsProps {
+  counter: number;
+  increaseBy: (value: number) => void;
+}; */
+
+export interface onChangeArgs {
+  product: Product;
+  count: number;
+}
+
+export interface ProductInCart extends Product {
+  count: number;
 }
