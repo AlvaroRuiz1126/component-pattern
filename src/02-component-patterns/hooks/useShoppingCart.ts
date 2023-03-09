@@ -13,6 +13,7 @@ export const useShoppingCart = () => {
     count: number;
     product: Product;
   }) => {
+    //console.log("onProductCountChange", count, product);
     setShoppingCart((oldShoppingCartState) => {
       const productInCart: ProductInCart = oldShoppingCartState[product.id] || {
         ...product,
